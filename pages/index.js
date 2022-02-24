@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Rigavo | Satılık Yatlar | Kiralık Yatlar | Yat Dünyası</title>
-        <meta name="description" content="Rigavo | Satılık Yatlar | Kiralık Yatlar | Yat Dünyası" />
+        <title>İkinci El ve Sıfır Satılık, Kiralık Deniz Vasıtaları ve Deniz Aracı Ekipmanları İlanları</title>
+        <meta name="description" content="Sahibinden satılık tekne fiyatları, ikinci el yat, katamaran, yelkenli, jet ski, gulet, balıkçı teknesi, şişme bot, römorkör, feribot, yolcu gemisi ve tüm deniz ekipmanları rigavo.com'da" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <main>
