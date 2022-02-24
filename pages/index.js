@@ -20,10 +20,10 @@ export default function Home() {
               <Image src={img} blurDataURL={img} placeholder="blur" layout='responsive' />
               <br />
               <div className={styles.infoCls}>
-                <i class="bi bi-envelope-fill"></i> <a href="mailto:info@rigavo.com">info@rigavo.com</a>
+                <i className="bi bi-envelope-fill"></i> <a href="mailto:info@rigavo.com">info@rigavo.com</a>
               </div>
               <div className={styles.infoCls}>
-                <i class="bi bi-info-circle-fill"></i>
+                <i className="bi bi-info-circle-fill"></i>
                 <Link href="/">
                   <a>www.rigavo.com</a>
                 </Link>
