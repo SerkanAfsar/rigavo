@@ -1,0 +1,152 @@
+@use "../color.scss" as *;
+@mixin alignCenter() {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.header {
+    padding: 10px;
+    width: 100%;
+    display: block;
+    background: $mainBlueColor;
+    @media all and (max-width: 768px) {
+        padding: 15px;
+    }
+
+    .headerWrapper {
+        display: flex;
+        justify-content: space-between;
+        color: $whiteColor;
+        align-items: center;
+
+        .logo {
+            color: $whiteColor;
+            background: $yellowColor;
+            padding: 5px 10px;
+            display: block;
+            font-size: 16px;
+            text-align: center;
+            color: $blackColor;
+            font-weight: bold;
+        }
+
+        .searchArea {
+            @include alignCenter();
+            a {
+                color: $whiteColor;
+                font-weight: 400;
+                font-size: 13px;
+                margin-left: 10px;
+            }
+            @media all and (max-width: 425px) {
+                flex-direction: column;
+                a {
+                    margin-top: 10px;
+                }
+            }
+
+            form {
+                display: flex;
+                border-radius: 3px;
+                background: $inputDarkBlueColor;
+                width: 300px;
+                align-items: center;
+                position: relative;
+
+                @media all and (max-width: 425px) {
+                    width: 250px;
+                }
+
+                input {
+                    width: calc(100% - 20px);
+                    padding: 7px 10px;
+                    color: $blackColor;
+                    font-size: 12px;
+                    font-weight: bold;
+                    outline: none;
+                    border: none;
+                    border-radius: 3px;
+                    background: transparent;
+                    font-weight: 500;
+                    @media all and (max-width: 425px) {
+                        width: calc(100% - 20px);
+                    }
+                }
+                button {
+                    border: none;
+                    height: 100%;
+                    display: block;
+                    background: transparent;
+                    border-radius: 0 3px 3px 0;
+                    padding: 7px 10px;
+                    i {
+                        color: $whiteColor;
+                    }
+                }
+                &:hover {
+                    background: $whiteColor;
+                    button {
+                        background: $lightBlueColor;
+                        color: $whiteColor;
+                        i {
+                            color: $whiteColor;
+                        }
+                    }
+                }
+            }
+        }
+
+        .memberShip {
+            @include alignCenter();
+            @media all and (max-width: 425px) {
+                flex-direction: column;
+                .btnAdv {
+                    margin-top: 15px;
+                }
+            }
+            ul {
+                display: flex;
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+                li {
+                    a {
+                        color: $whiteColor;
+                        font-size: 11px;
+                        position: relative;
+                        transition: all 0.3s ease-in-out;
+                        padding: 0px 10px;
+                        border-right: 1px solid $whiteColor;
+                        &:hover {
+                            color: $yellowColor;
+                        }
+                    }
+                    &:last-child {
+                        a {
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+            .btnAdv {
+                background: $lightBlueColor;
+                padding: 5px 15px;
+                display: block;
+                text-align: center;
+                color: $whiteColor;
+                font-size: 14px;
+                border-radius: 3px;
+                &:hover {
+                    background: rgba($color: $lightBlueColor, $alpha: 0.9);
+                    cursor: pointer;
+                }
+            }
+        }
+        @media all and (max-width: 768px) {
+            flex-direction: column;
+            .searchArea {
+                margin: 15px auto;
+            }
+        }
+    }
+}
