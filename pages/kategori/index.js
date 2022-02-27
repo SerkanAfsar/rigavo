@@ -6,3 +6,4 @@ const Kategori = () => {
     </div>)
 }
 export default Kategori;
+

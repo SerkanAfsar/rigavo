@@ -13,10 +13,7 @@ const CategoryList = () => {
                 <i className="bi bi-tags-fill"></i>
                 <div className={styles.mainCategory}>
                     <Link
-                        href={{
-                            pathname: '/kategori/[slug]',
-                            query: { slug: `${item.CategoryName}/${item.CategoryId}` },
-                        }}
+                        href="/kategori/[...slug]" as={`/kategori/${item.CategoryName}/${item.CategoryId}`}
                     >
                         <h3>{item.CategoryName}
 

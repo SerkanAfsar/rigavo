@@ -1,26 +1,30 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Categories } from 'Data';
-const KategoriDetay = ({ Content, params }) => {
-    console.log(params);
+const KategoriDetay = ({ slug }) => {
+    console.log(slug);
     return (<div>Kategori Detay Sayfası</div>)
 }
 export default KategoriDetay;
 
-export const getStaticProps = () => {
+export async function getStaticProps({ params }) {
+    // Make sure params are what we expected
+    console.log(params);
     return {
         props: {
-            Content: {}
-        }
-    }
+            slug: params.slug,
+        },
+    };
 }
 
-export const getStaticPaths = () => {
+export const getStaticPaths = async () => {
     const paths = Categories.map((item) => ({
         params: {
-            slug: `${item.CategoryName}/${item.id}`
+            slug: [`${item.CategoryName}`, `${item.CategoryId}`]
         }
     }));
+
+
     return {
         paths,
         fallback: false
