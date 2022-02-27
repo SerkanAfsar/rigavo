@@ -1,0 +1,60 @@
+@use "../color.scss" as *;
+.categoryList {
+    .category {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        border-bottom: 1px solid $grayColor;
+        padding: 8px 0px;
+
+        i {
+            display: inline-block;
+            background: $yellowColor;
+            padding: 4px 6px 3px;
+            font-size: 14px;
+            color: $mainBlueColor;
+            margin-right: 10px;
+            border-radius: 100%;
+        }
+        .mainCategory {
+            color: $mainBlueColor;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+            h3 {
+                display: block;
+
+                font-size: 14px;
+                margin: 6px 0px;
+                position: relative;
+
+                & + ul {
+                    border-bottom: none;
+                    padding: 0px;
+                    margin: 0px;
+                    opacity: 0;
+                    visibility: hidden;
+
+                    transition: all 0.3s ease-in-out;
+                    li {
+                        display: block;
+                        margin: 3px 0px;
+                        a {
+                            color: $mainBlueColor;
+                            font-weight: 500;
+                            text-decoration: none;
+                            font-size: 13px;
+                        }
+                        &:last-child {
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+                &.active + ul {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
