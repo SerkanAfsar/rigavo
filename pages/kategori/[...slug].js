@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Categories } from 'Data';
+import { CategoryNameList, friendlyUrl } from 'utilities';
 const KategoriDetay = ({ slug }) => {
     console.log(slug);
     return (<div>Kategori Detay Sayfası</div>)
@@ -20,9 +21,12 @@ export async function getStaticProps({ params }) {
 export const getStaticPaths = async () => {
     const paths = Categories.map((item) => ({
         params: {
-            slug: [`${item.CategoryName}`, `${item.CategoryId}`]
+            slug: [`${friendlyUrl(item.CategoryName)}`, `${item.CategoryId}`]
         }
     }));
+
+    console.log(CategoryNameList(Categories));
+
 
 
     return {

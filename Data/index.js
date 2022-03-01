@@ -5,7 +5,23 @@ export const Categories = [
         SubCategories: [
             {
                 CategoryId: 2,
-                CategoryName: "Satılık"
+                CategoryName: "Satılık",
+                SubCategories: [
+                    {
+                        CategoryId: 90,
+                        CategoryName: "Satılık Sub 1",
+                        SubCategories: [
+                            {
+                                CategoryId: 123,
+                                CategoryName: "Satılık Sub 2"
+                            }
+                        ]
+                    },
+                    {
+                        CategoryId: 91,
+                        CategoryName: "Satılık Alt Kat 2",
+                    }
+                ]
 
             },
             {
