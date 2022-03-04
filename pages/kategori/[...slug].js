@@ -25,10 +25,6 @@ export const getStaticPaths = async () => {
         }
     }));
 
-    console.log(CategoryNameList(Categories));
-
-
-
     return {
         paths,
         fallback: false

@@ -6,22 +6,14 @@ export const friendlyUrl = (title) => {
 }
 
 export const CategoryNameList = (catList) => {
-
+    let name;
     return catList?.map((item) => {
-        const name = item.CategoryName;
-
-
-        const newArr = item?.SubCategories?.map(val => {
-            return val?.SubCategories ? name + " " + CategoryNameList(val.SubCategories).toString() : name + " " + val.CategoryName;
-
-        });
-
-        return newArr ? [name, ...newArr] : [name];
+        name = item.CategoryName;
+        return {
+            params: {
+                slug: [`${getSlug(value.CategoryName)}`, `${value.CategoryId}`]
+            }
+        }
     })
 
-    // return {
-    //     params: {
-    //         slug: [`${getSlug(value.CategoryName)}`, `${value.CategoryId}`]
-    //     }
-    // }
 }

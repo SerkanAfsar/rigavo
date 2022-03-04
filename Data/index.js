@@ -9,17 +9,17 @@ export const Categories = [
                 SubCategories: [
                     {
                         CategoryId: 90,
-                        CategoryName: "Satılık Sub 1",
+                        CategoryName: "Sub 1",
                         SubCategories: [
                             {
                                 CategoryId: 123,
-                                CategoryName: "Satılık Sub 2"
+                                CategoryName: "Sub 2"
                             }
                         ]
                     },
                     {
                         CategoryId: 91,
-                        CategoryName: "Satılık Alt Kat 2",
+                        CategoryName: "Alt Kat 2",
                     }
                 ]
 
@@ -36,7 +36,12 @@ export const Categories = [
         CategoryId: 4,
         SubCategories: [
             {
-                CategoryName: "Satılık"
+                CategoryName: "Satılık",
+                SubCategories: [
+                    {
+                        CategoryName: "Yelkenli Satılık Sub 1"
+                    }
+                ]
             },
             {
                 CategoryName: "Kiralık"
