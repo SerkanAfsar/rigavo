@@ -11,7 +11,7 @@ const Header = () => {
                         <form>
                             <input type="text" placeholder='Kelime,ilan no veya mağaza adı ile ara...' />
                             <button type="submit">
-                                <i class="bi bi-search"></i>
+                                <i className="bi bi-search"></i>
                             </button>
                         </form>
                         <a href="#">Detaylı Arama</a>
